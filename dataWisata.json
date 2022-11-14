@@ -1,0 +1,7 @@
+wisata = [
+    {
+        "nama": "Kawasan",
+        "img":"bla",
+        "deskripsi": "sebuah tempat wisata di kota Manado"
+    }
+];
