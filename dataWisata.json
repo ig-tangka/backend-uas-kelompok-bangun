@@ -5,18 +5,19 @@
         "deskripsi": "sebuah tempat wisata di kota Manado"
     },
     {
-        "nama": "Pokas",
+        "nama": "Pohon Kasih",
         "img":"bla",
-        "deskripsi": "sebuah tempat wisata di kota Manado" 
+        "deskripsi": "sebuah tempat wisata di Kawasan" 
     },
     {
         "nama": "Area Food Truck",
         "img":"bla",
-        "deskripsi": "sebuah tempat wisata di kota Manado"
+        "deskripsi": "sebuah tempat wisata di Kawasan"
     },
     {
         "nama": "God Bless Park",
         "img":"bla",
         "deskripsi": "sebuah tempat wisata di kota Manado"
     }
+    
 ]
