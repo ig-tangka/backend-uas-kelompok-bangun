@@ -1,0 +1,8 @@
+POST http://localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Kawasan Megamas",
+    "deskripsi": "Kawasan Megamas merupakan salah satu kawasan baru yang berkembang cukup pesat di Kota Manado. Beragam fungsi yang terdapat dalam kawasan tersebut, baik sebagai tempat berbelanja, pusat kuliner dan tempat berkumpul masyarakat kota",
+    "img" : "a"
+}
