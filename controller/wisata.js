@@ -40,7 +40,7 @@ export const updateWisata = async (req, res) => {
                 id: req.params.id,
             },
         });
-        res.status(200).json({ msg: 'Wisata Updated'});
+        res.status(200).json({ msg: 'WisAta Updated'});
     } catch (error) {
         console.log(error.messagge);
     }
