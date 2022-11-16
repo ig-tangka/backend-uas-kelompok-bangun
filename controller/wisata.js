@@ -1,4 +1,4 @@
-// import Wisata from '..model'
+import Wisata from '../model/wisataModel'
 
 export const getWisata = async (req,res) => {
     try {
