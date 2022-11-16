@@ -6,3 +6,103 @@ Content-Type: application/json
     "deskripsi": "Kawasan Megamas merupakan salah satu kawasan baru yang berkembang cukup pesat di Kota Manado. Beragam fungsi yang terdapat dalam kawasan tersebut, baik sebagai tempat berbelanja, pusat kuliner dan tempat berkumpul masyarakat kota",
     "img" : "a"
 }
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Area Food Truck",
+    "deskripsi": "Area Food Truck adalah salah satu sub wisata dalam kawasan megamas",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Pohon Kasih",
+    "deskripsi": "Area Food Truck adalah salah satu sub wisata dalam kawasan megamas",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Area Food Truck",
+    "deskripsi": "Area Food Truck adalah salah satu sub wisata dalam kawasan megamas",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Malalayang Beach Walk",
+    "deskripsi": "Area wisata menikmati sunset yang baru dikembangkan oleh pemerintah kota Manado",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Cafe",
+    "deskripsi": "Salah satu subwisata di Malalayang Beach Walk",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Tugu MBW",
+    "deskripsi": "Salah satu subwisata di Malalayang Beach Walk",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "God Bless Park",
+    "deskripsi": "Merupakan public park yang berada di Kota Manado. Public park (taman) ini sering dimanfaatkan oleh warga Kota Manado untuk olahraga, refreshing, hingga bersantai",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Patung Tangan Berdoa",
+    "deskripsi": "Salah satu subwisata di God Bless Park",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Monumen Tulisan Doa",
+    "deskripsi": "Salah satu subwisata di God Bless Park",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Boulevard 2 Tuminting",
+    "deskripsi": "Salah satu subwisata di God Bless Park",
+    "img" : "a"
+}
