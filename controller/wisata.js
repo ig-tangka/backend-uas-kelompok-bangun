@@ -12,7 +12,7 @@ export const getWisata = async (req,res) => {
 export const getWisataById = async (req, res) => {
     try {
         // SELECT * FROM products WHERE id = ?
-        const response = await Product.findOne({
+        const response = await Wisata.findOne({
             where: {
                 id: req.params.id
             }
@@ -26,8 +26,8 @@ export const getWisataById = async (req, res) => {
 export const createWisata = async (req, res) => {
     try {
         // INSERT
-        await Product.create(req.body);
-        res.status(201).json({ msg: 'Product Created'})
+        await Wisata.create(req.body);
+        res.status(201).json({ msg: 'Wisata Created'})
     } catch (error) {
         console.log(error.messagge);
     }
@@ -35,12 +35,12 @@ export const createWisata = async (req, res) => {
 
 export const updateWisata = async (req, res) => {
     try {
-        await Product.update(req.body, {
+        await Wisata.update(req.body, {
             where: {
                 id: req.params.id,
             },
         });
-        res.status(200).json({ msg: 'Product Updated'});
+        res.status(200).json({ msg: 'Wisata Updated'});
     } catch (error) {
         console.log(error.messagge);
     }
@@ -48,12 +48,12 @@ export const updateWisata = async (req, res) => {
 
 export const deleteWisata = async (req, res) => {
     try {
-        await Product.destroy({
+        await Wisata.destroy({
             where: {
                 id: req.params.id,
             },
         });
-        res.status(200).json({ msg: 'Product Deleted'})
+        res.status(200).json({ msg: 'Wisata Deleted'})
     } catch (error) {
         console.log(error.messagge);
     }
