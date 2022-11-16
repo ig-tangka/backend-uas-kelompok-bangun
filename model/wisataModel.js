@@ -5,10 +5,10 @@ const { DataTypes } = Sequelize;
 
 const Wisata = db.define("wisata", {
     nama: DataTypes.STRING,
-    deskripsi: DataTypes.VARCHAR,
-    img: DataTypes.VARCHAR,
+    deskripsi: DataTypes.STRING,
+    img: DataTypes.STRING,
 }, {
-    freezeTableName: true,
+    freezeTableName: true
 });
 
 export default Wisata;
