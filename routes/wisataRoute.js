@@ -5,7 +5,7 @@ import {
   createWisata,
   updateWisata,
   deleteWisata,
-} from "../controller/wisata.js";
+} from "../controller/Wisata.js";
 
 const router = express.Router();
 
