@@ -32,17 +32,17 @@ export const createWisata = async (req, res) => {
 };
 
 export const updateWisata = async (req, res) => {
-  try {
-    await Wisata.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
-    });
-    res.status(200).json({ msg: "Wisata Updated" });
-  } catch (error) {
-    console.log(error.messagge);
-  }
-};
+    try {
+        await Wisata.update(req.body, {
+            where: {
+                id: req.params.id,
+            },
+        });
+        res.status(200).json({ msg: 'Wisata Updated'});
+    } catch (error) {
+        console.log(error.messagge);
+    }
+}
 
 export const deleteWisata = async (req, res) => {
   try {
