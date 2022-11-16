@@ -13,7 +13,7 @@ Content-Type: application/json
 
 {
     "nama": "Area Food Truck",
-    "deskripsi": "Area Food Truck adalah salah satu sub wisata dalam kawasan megamas",
+    "deskripsi": "Area Food Truck adalah salah satu sub wisata dalam kawasan megamas yang bersebelahan dengan pantai",
     "img" : "a"
 }
 
@@ -23,17 +23,7 @@ Content-Type: application/json
 
 {
     "nama": "Pohon Kasih",
-    "deskripsi": "Area Food Truck adalah salah satu sub wisata dalam kawasan megamas",
-    "img" : "a"
-}
-
-###
-POST http:localhost:5000/wisata
-Content-Type: application/json
-
-{
-    "nama": "Area Food Truck",
-    "deskripsi": "Area Food Truck adalah salah satu sub wisata dalam kawasan megamas",
+    "deskripsi": "Area Food Truck adalah salah satu sub wisata dalam kawasan megamas yang dapat menampilkan pulau bunaken dan manado tua",
     "img" : "a"
 }
 
@@ -53,7 +43,7 @@ Content-Type: application/json
 
 {
     "nama": "Cafe",
-    "deskripsi": "Salah satu subwisata di Malalayang Beach Walk",
+    "deskripsi": "Salah satu subwisata di Malalayang Beach Walk yang menyiapkan santapan makan khas Manado",
     "img" : "a"
 }
 
@@ -63,7 +53,7 @@ Content-Type: application/json
 
 {
     "nama": "Tugu MBW",
-    "deskripsi": "Salah satu subwisata di Malalayang Beach Walk",
+    "deskripsi": "Salah satu subwisata di Malalayang Beach Walk dengan bentuk globe yang dikelilingi dengan ikan",
     "img" : "a"
 }
 
@@ -83,7 +73,7 @@ Content-Type: application/json
 
 {
     "nama": "Patung Tangan Berdoa",
-    "deskripsi": "Salah satu subwisata di God Bless Park",
+    "deskripsi": "Salah satu subwisata di God Bless Park yang menjadi icon utama",
     "img" : "a"
 }
 
@@ -93,7 +83,7 @@ Content-Type: application/json
 
 {
     "nama": "Monumen Tulisan Doa",
-    "deskripsi": "Salah satu subwisata di God Bless Park",
+    "deskripsi": "Salah satu subwisata di God Bless Park yang bertuliskan doa dalam bahasa-bahasa daerah",
     "img" : "a"
 }
 
@@ -103,6 +93,26 @@ Content-Type: application/json
 
 {
     "nama": "Boulevard 2 Tuminting",
-    "deskripsi": "Salah satu subwisata di God Bless Park",
+    "deskripsi": "area jalan bersebelahan dengan pantai dengan nuansa sunset dan malam yang meriah",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Street Food",
+    "deskripsi": "Salah satu subwisata di boulevard 2 tuminting yang banyak menjual makanan",
+    "img" : "a"
+}
+
+###
+POST http:localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "nama": "Pasar Malam",
+    "deskripsi": "Salah satu subwisata di boulevard 2 tuminting yang menyiapkan wahana-wahana bagi keluarga",
     "img" : "a"
 }
