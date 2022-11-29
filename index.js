@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import wisataRoute from "./routes/wisataRoute.js";
+import commentSection from "./routes/commentSection.js"
 
 const app = express();
 app.use(cors());
