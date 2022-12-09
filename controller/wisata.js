@@ -47,6 +47,7 @@ export const createWisata = (req, res) => {
         nama: nama,
         deskripsi: deskripsi,
         img: fileName,
+        url: url,
       });
       res.status(201).json({ msg: "Wisata Created" });
     } catch (error) {
