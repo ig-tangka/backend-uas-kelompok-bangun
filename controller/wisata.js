@@ -24,34 +24,35 @@ export const getWisataById = async (req, res) => {
   }
 };
 
-export const createWisata = async (req, res) => {
-  if(req.files === null) return res.status(400).json({msg: "no file Uploaded"});
-  const name = req.body.title;
+export const createWisata = (req, res) => {
+  if(req.files === null) 
+    return res.status(400).json({msg: "no file Uploaded"});
+  const { nama, deskripsi } = req.body;
   const file = req.files.file;
   const fileSize = file.data.length;
   const ext = path.extname(file.name);
   const fileName = file.md5 + ext;
   const url = `${req.protocol}://${req.get("host")}/images/${fileName}`;
-  const allowedType = ['.png','.jpg','.jpeg'];
+  const allowedType = [".png", ".jpg", ".jpeg"];
   
-  if(!allowedType.includes(ext.toLowerCase())) return res.status(422).json({msg:"Invalid Images"});
-  if(fileSize > 5000000) return res.status(422).json({msg: "Images must be less than 5 MB"});
+  if(!allowedType.includes(ext.toLowerCase())) 
+    return res.status(422).json({msg:"Invalid Images"});
+  if(fileSize > 5000000) 
+    return res.status(422).json({msg: "Images must be less than 5 MB"});
 
-  file.mv(` .public/images/${fileName}`, async(err)=>{
-    if(err) return res.status(500).json({msg: err.message})
+  file.mv(`.public/images/${fileName}`, async(err) => {
+    if (err) return res.status(500).json({msg: err.message })
     try {
       await Wisata.create({
         nama: nama,
-        deksripsi: deskripsi,
+        deskripsi: deskripsi,
         img: fileName,
-    });
+      });
       res.status(201).json({ msg: "Wisata Created" });
     } catch (error) {
       console.log(error.messagge);
     }
-  })
-
-  
+  });
 };
 
 export const updateWisata = async (req, res) => {
@@ -84,7 +85,7 @@ export const updateWisata = async (req, res) => {
       if (err) return res.status(500).json({ msg: err.message});
     });
   }
-  const { nama, deskripsi, img} = req.body;
+  const { nama, deskripsi} = req.body;
   const url = `${req.protocol}://${req.get("host")}/images/${fileName}`;
 
   try {
@@ -121,6 +122,6 @@ export const deleteWisata = async (req, res) => {
     });
     res.status(200).json({ msg: "Wisata Deleted" });
   } catch (error) {
-    console.log(error.messagge);
+    console.log(error.message);
   }
 };
