@@ -40,13 +40,13 @@ export const createWisata = (req, res) => {
   if(fileSize > 5000000) 
     return res.status(422).json({msg: "Images must be less than 5 MB"});
 
-  file.mv(`.public/images/${fileName}`, async(err) => {
+  file.mv(`./public/images/${fileName}`, async(err) => {
     if (err) return res.status(500).json({msg: err.message })
     try {
       await Wisata.create({
         nama: nama,
         deskripsi: deskripsi,
-        img: fileName,
+        image: fileName,
         url: url,
       });
       res.status(201).json({ msg: "Wisata Created" });

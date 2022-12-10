@@ -4,9 +4,7 @@ import db from "../config/Database.js"
 const { DataTypes } = Sequelize;
 
 const Comment = db.define("commentSection", {
-    nama: DataTypes.STRING,
     Comment: DataTypes.STRING,
-    img: DataTypes.STRING,
 }, {
     freezeTableName: true
 });
