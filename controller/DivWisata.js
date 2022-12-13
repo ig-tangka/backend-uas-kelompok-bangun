@@ -1,18 +1,18 @@
-import SubWisata from "../model/subWisataModel.js";
+import DivWisata from "../model/divWisataModel.js";
 import path from "path";
 
-export const getSubWisata = async (req, res) => {
+export const getDivWisata = async (req, res) => {
     try {
-      const response = await SubWisata.findAll();
+      const response = await DivWisata.findAll();
       res.status(200).json(response);
     } catch (error) {
       console.log(error.message);
     }
   };
   
-  export const getSubWisataById = async (req, res) => {
+  export const getDivWisataById = async (req, res) => {
     try {
-      const response = await SubWisata.findOne({
+      const response = await DivWisata.findOne({
         where: {
           id: req.params.id,
         },
@@ -23,10 +23,10 @@ export const getSubWisata = async (req, res) => {
     }
   };
 
-  export const createSubWisata = async (req, res) => {
+  export const createDivWisata = async (req, res) => {
     if(req.files === null) 
         return res.status(400).json({msg: "no file Uploaded"});
-    const { nama, deskripsi, wisataId } = req.body;
+    const { nama, deskripsi, divWisataId } = req.body;
     const file = req.files.file;
     const fileSize = file.data.length;
     const ext = path.extname(file.name);
@@ -42,14 +42,14 @@ export const getSubWisata = async (req, res) => {
     file.mv(`./public/images/${fileName}`, async(err) => {
         if (err) return res.status(500).json({msg: err.message })
         try {
-        await SubWisata.create({
+        await DivWisata.create({
             nama: nama,
             deskripsi: deskripsi,
             image: fileName,
             url: url,
-            wisataId: wisataId,
+            divWisataId: divWisataId,
         });
-        res.status(201).json({ msg: "Sub Wisata Created" });
+        res.status(201).json({ msg: "Div Wisata Created" });
         } catch (error) {
         console.log(error.messagge);
         }
