@@ -1,9 +1,10 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
+import Wisata from "../model/wisataModel.js";
 
 const { DataTypes } = Sequelize;
 
-const Wisata = db.define("wisata", {
+const subWisata = db.define("subWisata", {
     nama: DataTypes.STRING,
     deskripsi: DataTypes.STRING,
     image: DataTypes.STRING,
@@ -12,4 +13,12 @@ const Wisata = db.define("wisata", {
     freezeTableName: true
 });
 
-export default Wisata;
+Wisata.hasMany(subWisata);
+
+subWisata.belongsTo(Wisata, {
+    foreignKey: "wisataId",
+});
+
+export default subWisata;
+
+

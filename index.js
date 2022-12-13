@@ -2,7 +2,8 @@ import express from "express";
 import FileUpload from "express-fileupload";
 import cors from "cors";
 import wisataRoute from "./routes/wisataRoute.js";
-import commentSection from "./routes/commentSection.js"
+import commentSection from "./routes/commentSection.js";
+import subWisataRoute from "./routes/subWisataRoute.js";
 import db from "./config/Database.js";
 
 const app = express();
@@ -17,5 +18,6 @@ app.use(FileUpload());
 app.use(express.static("public"));
 app.use(wisataRoute);
 app.use(commentSection);
+app.use(subWisataRoute);
 
 app.listen(5000, () => console.log("Server running on port 5000"));
